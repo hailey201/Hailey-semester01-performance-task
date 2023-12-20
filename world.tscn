@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://duemjd0qhekrw"]
+[gd_scene load_steps=5 format=3 uid="uid://duemjd0qhekrw"]
 
 [ext_resource type="Texture2D" uid="uid://bwmny50vdxvr1" path="res://assets/wallpaperCabin.jpg" id="1_85gfb"]
+[ext_resource type="PackedScene" uid="uid://dwd3tixqgo08p" path="res://player.tscn" id="2_2f1c6"]
+[ext_resource type="PackedScene" uid="uid://eeot6oa6t3e0" path="res://enemy.tscn" id="3_ybiqm"]
+[ext_resource type="AudioStream" uid="uid://dijlc3v6i0or3" path="res://assets/bg_music.mp3" id="4_2qb7y"]
 
 [node name="World" type="Node2D"]
 
@@ -8,3 +11,13 @@
 scale = Vector2(0.61, 0.61)
 texture = ExtResource("1_85gfb")
 centered = false
+
+[node name="Player" parent="." instance=ExtResource("2_2f1c6")]
+position = Vector2(185, 495)
+
+[node name="Enemy" parent="." instance=ExtResource("3_ybiqm")]
+position = Vector2(1097, 91)
+
+[node name="Backround Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_2qb7y")
+autoplay = true

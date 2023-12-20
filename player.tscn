@@ -11,6 +11,7 @@ script = ExtResource("1_dwk8g")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_ipkpt")
+script = ExtResource("1_dwk8g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.5, -5)
